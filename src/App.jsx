@@ -11,6 +11,10 @@ import Spotify from './components/window/spotify.jsx'
 import Youtube from './components/window/youtube.jsx'
 import MyTerminal from './components/window/testTerminal.jsx'
 
+import bg from "./assets/bg.jpg";
+
+
+
 function App() {
 
   const [windowState, setWindowState] = useState({
@@ -23,7 +27,12 @@ function App() {
   })
 
   return (
-    <main>
+    <main style={{
+    backgroundImage: `url(${bg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh"
+  }}  >
 
       <Dock windowState={windowState} setWindowState={setWindowState} />
       <Nav /> 

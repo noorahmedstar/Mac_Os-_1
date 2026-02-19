@@ -1,6 +1,13 @@
 import React from 'react'
 import "./dock.scss"
 
+import githubIcon from "../assets/github.svg";
+import noteIcon from "../assets/note.svg";
+import pdfIcon from "../assets/pdf.svg";
+import spotifyIcon from "../assets/spotify-2.svg";
+import wikiIcon from "../assets/wiki.svg";
+import terminalIcon from "../assets/windows-terminal.svg";
+
 const Dock = ({ setWindowState }) => {
 
   const openWindow = (name) => {
@@ -14,27 +21,27 @@ const Dock = ({ setWindowState }) => {
     <footer className='dock'>
 
       <div onClick={() => openWindow("Github")} className="icon">
-        <img src="src/assets/github.svg" />
+        <img src={githubIcon} alt="github" />
       </div>
 
       <div onClick={() => openWindow("Note")} className="icon">
-        <img src="src/assets/note.svg" />
+        <img src={noteIcon} alt="note" />
       </div>
 
       <div onClick={() => openWindow("Pdf")} className="icon">
-        <img src="src/assets/pdf.svg" />
+        <img src={pdfIcon} alt="pdf" />
       </div>
 
       <div onClick={() => openWindow("Spotify")} className="icon">
-        <img src="src/assets/spotify-2.svg" />
+        <img src={spotifyIcon} alt="spotify" />
       </div>
 
       <div onClick={() => openWindow("Youtube")} className="icon">
-        <img src="src/assets/wiki.svg" />
+        <img src={wikiIcon} alt="wiki" />
       </div>
 
       <div onClick={() => openWindow("MyTerminal")} className="icon">
-        <img src="src/assets/windows-terminal.svg" />
+        <img src={terminalIcon} alt="terminal" />
       </div>
 
     </footer>
